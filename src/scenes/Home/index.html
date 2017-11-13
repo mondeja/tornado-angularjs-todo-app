@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo app with Tornado + AngularJS</title>
+    
+    <link href="css/vendors/tether.min.css" rel="stylesheet">
+    <link href="css/vendors/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vendors/font-awesome.min.css" rel="stylesheet">
+    <link href="Home/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container" ng-controller="TasksCtrl">
+    <div class="col-xl-4 offset-xl-4">
+        <div id="tasksInput">
+            <h1>todos</h1>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="taskName" ng-keydown="$event.keyCode == 13 && addTask()" placeholder="//placeholder//" ng-cloak>
+                </div>
+            </form>
+        </div>
+        <div class="container" id="tasksList" ng-cloak>
+            <ul class="list-group">
+                <li class="list-group-item task" ng-repeat="t in tasks track by $index">//t//
+                    <a href="#">
+                        <i class="fa fa-times pull-right deleteTaskButton" ng-click="deleteTask(this)"></i>
+                     </a>
+                </li>
+            </ul>
+        </div>
+        
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="col-xl-4 offset-xl-4">
+        <h6>Todo app with Tornado + AngularJS</h6>
+        <p id="author">Made by <a href="https://github.com/mondeja">Álvaro Mondéjar</a>
+    </div>
+</footer>
+
+
+<!-- BOOTSTRAP -->
+<script src="js/vendors/tether.min.js"></script>
+<script src="js/vendors/jquery-3.2.1.min.js"></script>
+<script src="js/vendors/bootstrap.min.js"></script>
+
+<!-- ANGULARJS -->
+<script src="js/vendors/angular.min.js"></script>
+
+<!-- app controller -->
+<script src="Home/index.js"></script>
+
+</body>
+</html>

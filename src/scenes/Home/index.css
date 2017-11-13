@@ -1,0 +1,68 @@
+/* PALETA DE COLORES:
+  #00675b
+  #009688
+  #52c7b8
+  #cbeee9
+  #d5f1ed
+
+*/
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	background-color: #d5f1ed;
+	font-family: 'Oswald', sans-serif;
+	position: relative;
+	padding-bottom: 6rem;
+	min-height: 100%;
+}
+
+#tasksInput > h1 {
+	color: #00675b;
+	font-size: 5em;
+	text-align: center;
+}
+
+#tasksList {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 0px;
+
+}
+
+.task {
+	background-color: #009688;
+	color: white;
+	font-size: 1em;
+}
+
+.deleteTaskButton {
+	padding-top: 4px;
+	color: white;
+}
+
+.footer {
+	background-color: #00675b;
+	color: white;
+	font-size: 13px;
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+	text-align: center;
+}
+
+#author>a {
+    color: inherit;
+
+}
