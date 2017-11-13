@@ -43,7 +43,7 @@ class App(Application):
         #static_path = os.path.join(app_location, "client", app_path, "static")
         #template_path = os.path.join(app_location, "client", app_path, "templates")
 
-        settings =  {
+        settings = {
             "debug": config.DEBUG,
             "cookie_secret": config.SECRET_KEY,
             "xsrf_cookies": True,
@@ -66,8 +66,7 @@ class App(Application):
         self.logger.debug("App started with configuration: %s" % str(show_config))
         # ========================================
 
-        super(App, self).__init__(self.router, 
-                                  **settings,
+        super(App, self).__init__(self.router, **settings,
                                   ssl_options=ssl_options)
 
 
@@ -75,9 +74,7 @@ class App(Application):
     @property
     def router(self):
         from tornado.web import StaticFileHandler
-
         from scenes.Home import HomeHandler    
-
 
         routes = [
 
