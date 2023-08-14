@@ -1,4 +1,4 @@
 colorama==0.3.9
 motor==1.1
 pymongo==3.5.1
-tornado==4.5.2
+tornado==6.3.3
